@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Attendance Overview</h2>
+
+        <p>Total Classes: <strong>{{ total }}</strong></p>
+        <p>Attended Classes: <strong>{{ attended }}</strong></p>
+
+        <p>
+            Attendance Percentage:
+            <span class="badge {{ 'green' if percentage >= 75 else 'red' }}">
+                {{ percentage }}%
+            </span>
+        </p>
+
+        <a class="back-btn" href="/dashboard">⬅ Back to Dashboard</a>
+    </div>
+
+</div>
+
+</body>
+</html>

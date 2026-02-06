@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Academics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Academic Performance</h2>
+
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+            {% for a in academics %}
+            <tr>
+                <td>{{ a.subject }}</td>
+                <td>{{ a.marks }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a class="back-btn" href="/dashboard">⬅ Back to Dashboard</a>
+    </div>
+
+</div>
+
+</body>
+</html>

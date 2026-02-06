@@ -1,18 +1,37 @@
-v<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>ERP Dashboard</title>
+    <title>Student ERP Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Welcome to Student ERP Dashboard</h1>
 
-    <ul>
-        <li><a href="/academics">Academics</a></li>
-        <li><a href="/attendance">Attendance</a></li>
-        <li><a href="/placements">Placements</a></li>
-    </ul>
+<div class="container">
 
-    <br>
-    <a href="/logout">Logout</a>
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Student ERP Portal</h1>
+        <p>
+            {{ student.name }} • {{ student.usn }} •
+            {{ student.branch }} • Graduation {{ student.graduation_year }}
+        </p>
+    </div>
+
+    <!-- MODULES -->
+    <div class="card">
+        <h2>Modules</h2>
+        <br>
+
+        <div class="modules">
+            <a class="module-btn" href="/academics">📘 Academics</a>
+            <a class="module-btn" href="/attendance">📊 Attendance</a>
+            <a class="module-btn" href="/placements">💼 Placements</a>
+        </div>
+
+        <a class="logout-btn" href="/logout">Logout</a>
+    </div>
+
+</div>
+
 </body>
 </html>

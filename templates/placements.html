@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placements</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Placement Status</h2>
+
+        <p>
+            Current Status:
+            <span class="badge {{ 'green' if placements.status == 'Placed' else 'red' }}">
+                {{ placements.status }}
+            </span>
+        </p>
+
+        <h3>Offers</h3>
+        <ul>
+            {% for offer in placements.offers %}
+                <li>{{ offer.company }} — {{ offer.ctc }} LPA</li>
+            {% endfor %}
+        </ul>
+
+        <a class="back-btn" href="/dashboard">⬅ Back to Dashboard</a>
+    </div>
+
+</div>
+
+</body>
+</html>

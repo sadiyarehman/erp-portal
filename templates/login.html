@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>ERP Login</title>
-</head>
-<body>
-    <h2>ERP Login</h2>
+<div class="login-wrapper">
+    <div class="login-card">
+        <h2>Student Portal</h2>
+        <p>Login to continue</p>
 
-    {% if error %}
-        <p style="color:red;">{{ error }}</p>
-    {% endif %}
+        <form>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="text" placeholder="Enter email">
+            </div>
 
-    <form method="post">
-        <label>Username:</label><br>
-        <input type="text" name="username" required><br><br>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter password">
+            </div>
 
-        <label>Password:</label><br>
-        <input type="password" name="password" required><br><br>
+            <button class="login-btn">Login</button>
+        </form>
 
-        <button type="submit">Login</button>
-    </form>
-</body>
-</html>
+        <div class="extra-links">
+            <a href="#">Forgot password?</a>
+        </div>
+    </div>
+</div>

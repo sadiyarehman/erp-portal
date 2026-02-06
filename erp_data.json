@@ -1,0 +1,25 @@
+{
+  "student": {
+    "name": "Namratha",
+    "usn": "1KT23CS128",
+    "branch": "CSE",
+    "graduation_year": 2027
+  },
+  "academics": [
+    { "subject": "DSA", "marks": 85 },
+    { "subject": "DBMS", "marks": 90 },
+    { "subject": "OS", "marks": 88 }
+  ],
+  "attendance": {
+    "total_classes": 120,
+    "attended_classes": 108
+  },
+  "placements": {
+    "eligible": true,
+    "status": "Placed",
+    "offers": [
+      { "company": "TCS", "ctc": 7 },
+      { "company": "Infosys", "ctc": 9 }
+    ]
+  }
+}
