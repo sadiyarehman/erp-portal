@@ -23,14 +23,14 @@ def load_erp_data():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        username = request.form["username"]
+        email = request.form["email"]
         password = request.form["password"]
 
         users = load_users()
         student = users.get("student")
 
-        if student["username"] == username and student["password"] == password:
-            session["user"] = username
+        if student["email"] == email and student["password"] == password:
+            session["user"] = email
             return redirect("/dashboard")
         else:
             return render_template("login.html", error="Invalid credentials")

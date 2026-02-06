@@ -1,6 +1,6 @@
 {
   "student": {
-    "username": "student1",
-    "password": "student123"
+    "email": "student1@gmail.com",
+    "password": "1234"
   }
 }
