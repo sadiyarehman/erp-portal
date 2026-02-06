@@ -218,3 +218,111 @@ td {
 .extra-links a:hover {
     text-decoration: underline;
 }
+/* LOGIN PAGE */
+.login-body{
+    margin:0;
+    font-family:Segoe UI, Arial;
+    background: linear-gradient(135deg,#1e3a8a,#7c3aed);
+    height:100vh;
+}
+
+/* CENTER */
+.login-wrapper{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* CARD */
+.login-card{
+    width:380px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(18px);
+    padding:40px;
+    border-radius:18px;
+    color:white;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+.sub{
+    opacity:.8;
+    margin-bottom:25px;
+}
+
+/* FLOATING INPUT */
+.floating-group{
+    position:relative;
+    margin-bottom:22px;
+}
+
+.floating-group input{
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    background:rgba(255,255,255,0.9);
+    font-size:14px;
+}
+
+.floating-group label{
+    position:absolute;
+    left:12px;
+    top:13px;
+    font-size:13px;
+    color:#555;
+    transition:.2s;
+    pointer-events:none;
+}
+
+/* FLOAT EFFECT */
+.floating-group input:focus + label,
+.floating-group input:not(:placeholder-shown) + label{
+    top:-8px;
+    left:10px;
+    font-size:11px;
+    background:rgb(237, 168, 168);
+    padding:0 5px;
+    border-radius:6px;
+}
+
+/* PASSWORD EYE */
+.password-wrap{
+    position:relative;
+}
+
+.eye{
+    position:absolute;
+    color: black;
+    right:10px;
+    top:12px;
+    cursor:pointer;
+}
+
+/* BUTTON */
+.login-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.login-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* ERROR */
+.error-box{
+    background:#dc2626;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:15px;
+}
