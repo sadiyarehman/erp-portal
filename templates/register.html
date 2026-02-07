@@ -1,0 +1,11 @@
+<h2>Register</h2>
+
+<form method="POST">
+    <input name="email" placeholder="Email">
+    <input name="password" type="password" placeholder="Password">
+    <button>Create account</button>
+</form>
+
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}

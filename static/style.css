@@ -184,19 +184,19 @@ td {
 }
 
 /* LOGIN BUTTON */
-.login-btn {
-    width: 100%;
-    padding: 14px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #2563eb, #4f46e5);
-    color: white;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.25s;
+.login-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:white;
+    font-weight:600;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.25s;
 }
+
 
 .login-btn:hover {
     transform: translateY(-2px);
@@ -237,14 +237,18 @@ td {
 /* CARD */
 .login-card{
     width:380px;
-    background:rgba(255,255,255,0.1);
-    backdrop-filter:blur(18px);
-    padding:40px;
-    border-radius:18px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    padding:42px;
+    border-radius:20px;
     color:white;
-    box-shadow:0 20px 40px rgba(0,0,0,0.3);
     text-align:center;
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.15);
 }
+
 
 .sub{
     opacity:.8;
@@ -266,6 +270,11 @@ td {
     background:rgba(255,255,255,0.9);
     font-size:14px;
 }
+.floating-group input:focus{
+    box-shadow:0 0 0 3px rgba(59,130,246,0.25);
+    background:white;
+}
+
 
 .floating-group label{
     position:absolute;
@@ -276,23 +285,6 @@ td {
     transition:.2s;
     pointer-events:none;
 }
-
-/* FLOAT EFFECT */
-.floating-group input:focus + label,
-.floating-group input:not(:placeholder-shown) + label{
-    top:-8px;
-    left:10px;
-    font-size:11px;
-    background:rgb(237, 168, 168);
-    padding:0 5px;
-    border-radius:6px;
-}
-
-/* PASSWORD EYE */
-.password-wrap{
-    position:relative;
-}
-
 .eye{
     position:absolute;
     color: black;
@@ -321,8 +313,11 @@ td {
 
 /* ERROR */
 .error-box{
-    background:#dc2626;
+    background:rgba(220,38,38,0.15);
+    color:#fecaca;
     padding:10px;
-    border-radius:8px;
-    margin-bottom:15px;
+    border-radius:10px;
+    margin-bottom:18px;
+    font-size:14px;
+    border:1px solid rgba(220,38,38,0.4);
 }
